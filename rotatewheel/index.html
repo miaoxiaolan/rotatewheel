@@ -43,11 +43,12 @@
 
                 // var item = rnd(0, 7);
                 // 后端服务控制返回
-                var item;
+                var item;                
                 $.ajax({
                     type:'post',
                     url:"server.php",
-                    data:{},                    
+                    data:{integral : 100,userid: userid},    
+                    dataType: "json",                
                     async:false,                    
                     success:function (data){
                         item=data.item;
