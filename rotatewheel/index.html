@@ -43,15 +43,19 @@
 
                 // var item = rnd(0, 7);
                 // 后端服务控制返回
-                var item;                
+                var item;
                 $.ajax({
-                    type:'post',
-                    url:"server.php",
-                    data:{integral : 100,userid: userid},    
-                    dataType: "json",                
-                    async:false,                    
-                    success:function (data){
-                        item=data.item;
+                    type: 'post',
+                    url: "server.php",
+                    data: {
+                        integral: "60",
+                        userid: '1'
+                    },
+                    dataType: "json",
+                    async: false,
+                    success: function (data) {
+                        item = data;
+                        // console.log(item);
                     },
                 });
                 switch (item) {
@@ -87,22 +91,25 @@
                         //var angle = [287];
                         rotateFn(7, 287, '提高白条额度');
                         break;
+                    case 8:
+                        alert('积分不足');
+                        break;
                 }
 
-                console.log(item);
+                // console.log(item);
             });
         });
         //本地概率控制
         // function rnd(n, m) {
         //     var random= Math.random();
-           
+
         //     return Math.floor(random * (m - n + 1) + n)
         // }
     </script>
 </head>
 
 <body>
-    <div class="turntable-bg">        
+    <div class="turntable-bg">
         <div class="pointer"><img src="./pointer.png" alt="pointer"></div>
         <div class="rotate"><img id="rotate" src="./turntable.png" alt="turntable" style="transform: rotate(287deg);">
         </div>

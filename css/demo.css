@@ -60,7 +60,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 0 auto;
   position: relative;
   border: 1px solid #f00;
-  background: url("../turntable-bg.jpg");
+  background: url("../rotatewheel/4.jpg");
 }
 .turntable-bg .mask {
   width: 454px;
