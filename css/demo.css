@@ -1,89 +1,71 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+*{
   margin: 0;
   padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+  box-sizing:border-box;
 }
+@media only screen and (min-width:1200px){
+  .turntable-bg {
+    width: 650px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #f00;
+    background: url("../rotatewheel/4.jpg");
+  }
 
-html {
-  line-height: 1;
-}
+  .turntable-bg .mask {
+    width: 454px;
+    height: 451px;
+    position: absolute;
+    left: 116px;
+    top: 60px;
+    /*z-index:9;*/
+  }
 
-ol, ul {
-  list-style: none;
-}
+  .turntable-bg .pointer {
+    width: 174px;
+    height: 228px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -67px;
+    margin-top: -144px;
+    z-index: 8;
+  }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+  .turntable-bg .rotate {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    left: 116px;
+    top: 60px;
+  }
 
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
 }
+@media only screen and (max-width:1200px){
+  .turntable-bg {
+    width: 100%; 
+    height: 400px;   
+    background: url("../rotatewheel/4.jpg");
+    overflow-x: hidden;    
+  }
+  .turntable-bg .pointer img {
+    width: 80px;
+    height: 110px;
+    position: absolute;
+    left: 50%; 
+    top: 90px;   
+    margin-left: -40px;
+    
+    z-index: 8;
+  }
 
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-.turntable-bg {
-  width: 650px;
-  height: 600px;
-  margin: 0 auto;
-  position: relative;
-  border: 1px solid #f00;
-  background: url("../rotatewheel/4.jpg");
-}
-.turntable-bg .mask {
-  width: 454px;
-  height: 451px;
-  position: absolute;
-  left: 116px;
-  top: 60px;
-  /*z-index:9;*/
-}
-.turntable-bg .pointer {
-  width: 174px;
-  height: 228px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -67px;
-  margin-top: -144px;
-  z-index: 8;
-}
-.turntable-bg .rotate {
-  width: 450px;
-  height: 450px;
-  position: absolute;
-  left: 116px;
-  top: 60px;
+  .turntable-bg .rotate img {
+    width: 300px;
+    height: 300px;
+    left: 50%;        
+    margin-left: -150px;
+    position: absolute;
+    
+  }
 }

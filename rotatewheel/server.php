@@ -28,5 +28,5 @@ if( 60<=$jf){
 }else{
     $num=8;
 }
-// echo $num;
+
 echo json_encode($num);
